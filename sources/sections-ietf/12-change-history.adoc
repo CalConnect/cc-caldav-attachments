@@ -1,0 +1,98 @@
+[appendix]
+== metanorma-extension
+
+=== document history
+
+[EDITOR]
+====
+To be removed by RFC Editor before
+publication
+====
+
+[source,yaml]
+----
+- date:
+  - type: updated
+  edition: calext-04
+  amend:
+    - description: Added text explaining why this document is being published as Informational.
+    - description: Further specified `Cal-Managed-ID` per <<RFC7231, section=8.3.1>>.
+    - description: Specified that the `MANAGED-ID` parameter value is unique within the scope of the server.
+    - description: Added more text regarding preconditions.
+    - description: Added text about specific DoS attack vectors.
+    - description: Editorial changes from Gren Elliot and Phillip Kewisch.
+    - description: Editorial changes from Adam Roach.
+    - description: Editorial changes from Alexey Melnikov.
+    - description: Added reference to <<RFC4918>>.
+    - description: Minor editorial changes.
+- date:
+  - type: updated
+  edition: calext-03
+  amend:
+    - description: Changed to Informational based on feedback regarding non-standard method of updating an existing resource.
+    - description: Added references to sub-sections in Overview.
+    - description: Made support for Prefer header field a `SHOULD` for servers.
+    - description: Expanded recurring event examples to use conditional requests and to include the Expect header field.
+    - description: Minor editorial changes.
+- date:
+  - type: updated
+  edition: calext-02
+  amend:
+    - description: Moved "Error Handling" into its own sub-section.
+    - description: Split "Other Client Considerations" into "Processing Time" and "Migrating Calendar Data".
+- date:
+  - type: updated
+  edition: calext-01
+  amend:
+    - description: Changed all instances of "header" to "header field".
+    - description: Reworked wording of Prefer header field handling.
+    - description: Switched to recommending 102 (Processing) interim response to keep the client connection alive.
+    - description: Fixed description of Cal-Managed-ID response header field to state that it is also required in responses to successful attachment-update.
+    - description: Minor editorial changes.
+- date:
+  - type: updated
+  edition: calext-00
+  amend:
+    - description: Added Murchison as editor.
+    - description: Updated HTTP references to <<RFC7230>> and <<RFC7231>>.
+    - description: Updated Prefer header field references to <<RFC7240>>.
+    - description: Added Implementation Status section.
+    - description: Minor editorial changes.
+- date:
+  - type: updated
+  edition: daboo-03
+  amend:
+    - description: Fixed some examples.
+    - description: Fixed return-representation -> return=representation.
+    - description: Added statement that servers must not allow clients to `DELETE` attachments directly.
+    - description: Added new preconditions for valid managed-id values.
+    - description: Filled out Access Control section.
+    - description: Allow servers to not support per-instance attachments and advertise that fact to clients.
+- date:
+  - type: updated
+  edition: daboo-02
+  amend:
+    - description: `MANAGED-ID` changes on `PUT`.
+    - description: `MTAG` has been removed.
+    - description: Error pre-conditions added.
+    - description: Interaction with WebDAV `QUOTA` discussed.
+    - description: `max-attachment-*` limits added.
+    - description: Updated references.
+    - description: Removed `MUST` for specific 2xx codes in favor of generic success code.
+- date:
+  - type: updated
+  edition: daboo-01
+  amend:
+    - description: Tweaked `OPTIONS` capability wording.
+    - description: Added section on clients expecting 100-Continue for delayed response.
+    - description: Added text for clean-up and use of HTTP 410 on orphans.
+    - description: Added text on removing "`MANAGED-ID`" when exporting/importing calendar data.
+    - description: Added protocol examples.
+    - description: Added `MTAG` property parameter on `ATTACH` property
+    - description: Added `FILENAME` property parameter on `ATTACH` property
+    - description: "`id`" query parameter is now "`managed-id`".
+    - description: Use of `Cal-Managed-ID` header instead of Location header in responses.
+    - description: `rid` query param `MUST` contain `RECURRENCE-ID` without any conversion to UTC (case of floating events).
+    - description: Introduced `CALDAV:managed-attachments-server-URL` property
+    - description: Made support for Prefer header a `MUST` for servers.
+----

@@ -1,0 +1,13 @@
+[bibliography]
+== Bibliography
+
+* [[[RFC5023, IETF RFC 5023]]]
+
+* [[[RFC5546, IETF RFC 5546]]]
+
+* [[[RFC7320, IETF RFC 7320]]]
+
+* [[[RFC7942, IETF RFC 7942]]]
+
+* [[[RFC8144, IETF RFC 8144]]]
+

@@ -1,0 +1,29 @@
+== IANA Considerations
+
+=== Parameter Registrations
+
+This specification defines the following new iCalendar
+property parameters to be added to the registry defined in
+<<RFC5545,section=8.2.3>>:
+
+[%unnumbered]
+|===
+| Parameter | Status | Reference
+| SIZE | Current | RFCXXXX, <<SIZE-parameter>>
+| FILENAME | Current | RFCXXXX, <<FILENAME-parameter>>
+| MANAGED-ID | Current | RFCXXXX, <<MANAGED-ID-parameter>>
+|===
+
+=== Message Header Field Registrations
+
+The message header fields below should be added to the
+Permanent Message Header Field Registry (see <<RFC3864>>).
+
+==== Cal-Managed-ID
+
+Header field name:: Cal-Managed-ID
+Applicable protocol:: http
+Status:: standard
+Author/Change controller:: IETF
+Specification document(s):: this specification (<<managed-id-header>>)
+Related information:: none

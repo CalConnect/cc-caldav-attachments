@@ -1,0 +1,57 @@
+= CalDAV Managed Attachments
+:docnumber: 51013
+:edition: 1
+:copyright-year: 2019
+:language: en
+:doctype: standard
+:status: working-draft
+:revdate: 2019-01-01
+:published-date: 2019-01-01
+:technical-committee: CALENDAR
+:keywords: CalDAV, calendaring, attachment, ATTACH
+:fullname: Cyrus Daboo
+:surname: Daboo
+:givenname: Cyrus
+:affiliation: Apple Inc.
+:fullname_2: Arnaud Quillaud
+:surname_2: Quillaud
+:givenname_2: Arnaud
+:affiliation_2: Oracle Corporation
+:fullname_3: Kenneth Murchison
+:surname_3: Murchison
+:givenname_3: Kenneth
+:affiliation_3: FastMail US LLC
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+include::sections/00-abstract.adoc[]
+
+include::sections/01-intro.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-norm-refs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/03-overview.adoc[]
+
+include::sections/04-modifications-syntax.adoc[]
+
+include::sections/05-additional-header-fields.adoc[]
+
+include::sections/06-additional-webdav-props.adoc[]
+
+include::sections/07-implementation-status.adoc[]
+
+include::sections/08-security-considerations.adoc[]
+
+include::sections/09-iana-considerations.adoc[]
+
+include::sections/10-acknowledgments.adoc[]
+
+include::sections/aa-example.adoc[]
+
+include::sections/99-bibliography.adoc[]

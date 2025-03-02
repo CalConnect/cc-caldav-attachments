@@ -1,0 +1,32 @@
+[bibliography]
+== Normative References
+
+* [[[RFC2119, IETF RFC 2119]]]
+
+* [[[RFC2518, IETF RFC 2518]]]
+
+* [[[RFC3864, IETF RFC 3864]]]
+
+* [[[RFC4331, IETF RFC 4331]]]
+
+* [[[RFC4791, IETF RFC 4791]]]
+
+* [[[RFC4918, IETF RFC 4918]]]
+
+* [[[RFC5234, IETF RFC 5234]]]
+
+* [[[RFC5545, IETF RFC 5545]]]
+
+* [[[RFC6266, IETF RFC 6266]]]
+
+* [[[RFC6638, IETF RFC 6638]]]
+
+* [[[RFC7230, IETF RFC 7230]]]
+
+* [[[RFC7231, IETF RFC 7231]]]
+
+* [[[RFC7240, IETF RFC 7240]]]
+
+* [[[RFC7538, IETF RFC 7538]]]
+
+* [[[RFC8174, IETF RFC 8174]]]
