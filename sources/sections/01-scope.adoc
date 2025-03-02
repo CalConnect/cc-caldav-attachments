@@ -1,0 +1,3 @@
+== Scope
+
+//This document specifies an extension to the calendar access protocol (CalDAV) to allow attachments associated with iCalendar data to be stored and managed on the server.

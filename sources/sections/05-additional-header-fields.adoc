@@ -1,0 +1,34 @@
+== Additional Message Header Fields
+
+[[managed-id-header]]
+=== `Cal-Managed-ID` Response Header Field
+
+The `Cal-Managed-ID` response header field provides the value of
+the `MANAGED-ID` parameter corresponding to a newly added `ATTACH`
+property.
+
+ABNF::
++
+--
+[source%unnumbered]
+----
+Cal-Managed-ID = "Cal-Managed-ID" ":" paramtext
+; "paramtext" is defined in <<RFC5545,section=3.1>>
+----
+
+Example::
++
+--
+[source%unnumbered]
+----
+Cal-Managed-ID:aUNhbGVuZGFy
+----
+
+The Cal-Managed-ID header field `MUST` only be sent by an
+origin server in response to a successful `POST` request with an
+action set to attachment-add or attachment-update. It `MUST`
+only appear once in a response and `MUST NOT` appear in trailers.
+
+The Cal-Managed-ID header field is end to end and `MUST` be
+forwarded by intermediaries. Intermediaries `MUST NOT` insert,
+delete, or modify a Cal-Managed-ID header field.

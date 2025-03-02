@@ -1,0 +1,64 @@
+== Introduction
+
+The iCalendar <<RFC5545>> data format is
+used to represent calendar data and is used with
+iCalendar Transport-independent Interoperability
+Protocol (iTIP) <<RFC5546>> to handle scheduling operations
+between calendar users.
+
+<<RFC4791>> defines the Calendaring Extensions
+to WebDAV (CalDAV),
+based on HTTP <<RFC7230>>, for
+accessing calendar data stored on a server.
+
+Calendar users often want to include attachments with their
+calendar data events or tasks (for example a copy of a
+presentation, or the meeting agenda). iCalendar provides an
+"`ATTACH`" property whose value is either the inline Base64
+encoded attachment data, or a URL specifying the location of the
+attachment data.
+
+Use of inline attachment data is not ideal with CalDAV
+because the data would need to be uploaded to the server each
+time a change to the calendar data is done - even minor changes
+such as a change to the summary. Whilst a client could choose to
+use a URL value instead, the problem then becomes where and how
+the client discovers an appropriate URL to use and how it
+ensures that only those attendees listed in the event or task
+are able to access it.
+
+This specification solves this problem by having the client
+send the attachment to the server, separately from the iCalendar
+data, and the server takes care of adding appropriate "`ATTACH`"
+properties in the iCalendar data as well as managing access
+privileges. The server can also provide additional information
+to the client about each attachment in the iCalendar data, such
+as the size and an identifier.
+
+=== Rationale for Informational Status
+
+Although this extension to CalDAV has wide deployment, its
+design does not comply with some of the best current practices
+of HTTP, namely:
+
+* All operations on attachments are modeled as HTTP `POST`
+operations, where the actual type of operation is specified
+using a query parameter, instead of using separate HTTP `POST`,
+`PUT`, and `DELETE` methods where appropriate.
+
+* Specific query strings are hardwired into the protocol
+in violation of <<RFC7320, section=2.4>>
+
+Additionally, this extension misuses the
+Content-Disposition header field <<RFC6266>>
+as a request header field to convey a filename for an
+attachment rather than using an existing request header field
+suitable for that purpose, such as "Slug"
+(see <<RFC5023,section=9.7>>).
+
+Rather than creating interoperability problems with deployed
+code by updating the design of this extension to be compliant
+with best current practices and to allow this specification to
+be placed on the Standards Track, it was decided to simply
+document how existing implementations interoperate and to
+publish the document as Informational.

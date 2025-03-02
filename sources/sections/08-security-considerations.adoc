@@ -1,0 +1,16 @@
+== Security Considerations
+
+The security considerations in <<RFC4791>>
+and <<RFC4918>> apply to this extension.
+Additionally, servers need to be aware that a client could
+attack underlying storage by POSTing extremely large attachments
+and could attack processing time by uploading a recurring event
+with a large number of overrides and then repeatedly adding,
+updating, and deleting attachments.
+
+Malicious content could be introduced into the calendar
+server by way of a managed attachment, and propagated to many
+end users via scheduling. Servers `SHOULD` check managed
+attachments for malicious or inappropriate content. Upon
+detecting of such content, servers `SHOULD` remove the attachment,
+following the rules described in <<auto-cleanup>>.

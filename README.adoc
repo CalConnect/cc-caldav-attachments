@@ -1,22 +1,21 @@
-= CalConnect Standard: (TITLE)
+= CalConnect Standard: CalDAV Managed Attachments
 
-This work item belongs to CalConnect (TCs).
+This work item belongs to CalConnect CALDAV TC.
 
 image:https://github.com/CalConnect/cc-caldav-attachments/workflows/generate/badge.svg["Build Status", link="https://github.com/CalConnect/cc-caldav-attachments/actions?workflow=generate"]
 
 This document is available in its rendered forms here:
 
-* https://calconnect.github.io/cc-caldav-attachments/[CalConnect: Calendaring and scheduling -- Vocabulary (HTML)]
+* https://calconnect.github.io/cc-caldav-attachments/[CalConnect: CalDAV Managed Attachments (HTML)]
 
 == General
 
-This document specifies the (TITLE).
+This document specifies an extension to the calendar access protocol (CalDAV) to allow attachments associated with iCalendar data to be stored and managed on the server.
 
 The document is published as the following:
 
-* CalConnect CC (DOCNUMBER)
-* ISO (DOCNUMBER)
-* IETF draft-cc-caldav-attachments
+* CalConnect CC 51013
+* IETF draft-ietf-calext-caldav-attachments
 
 
 == Fetching the document
