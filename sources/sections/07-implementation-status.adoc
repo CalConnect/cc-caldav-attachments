@@ -3,122 +3,95 @@
 
 [EDITOR]
 ====
-RFC Editor: before publication please remove this section,
-the reference to <<RFC7942>>, and any resulting
-"URIs" references sub-section.
+RFC Editor: before publication please remove this section, the reference to
+<<RFC7942>>, and any resulting "URIs" references sub-section.
 ====
 
-This section records the status of known implementations of
-the protocol defined by this specification at the time of
-posting of this Internet-Draft, and is based on a proposal
-described in <<RFC7942>>. The
-description of implementations in this section is intended to
-assist the IETF in its decision processes in progressing
-drafts to RFCs.  Please note that the listing of any
-individual implementation here does not imply endorsement by
-the IETF.  Furthermore, no effort has been spent to verify the
-information presented here that was supplied by IETF
-contributors. This is not intended as, and must not be
-construed to be, a catalog of available implementations or
-their features. Readers are advised to note that other
-implementations may exist.
+This section records the status of known implementations of the protocol defined
+by this specification at the time of posting of this Internet-Draft, and is
+based on a proposal described in <<RFC7942>>. The description of implementations
+in this section is intended to assist the IETF in its decision processes in
+progressing drafts to RFCs.  Please note that the listing of any individual
+implementation here does not imply endorsement by the IETF.  Furthermore, no
+effort has been spent to verify the information presented here that was supplied
+by IETF contributors. This is not intended as, and must not be construed to be,
+a catalog of available implementations or their features. Readers are advised to
+note that other implementations may exist.
 
-According to <<RFC7942>>,
-"this will allow reviewers and working groups to assign due
-consideration to documents that have the benefit of running
-code, which may serve as evidence of valuable
-experimentation and feedback that have made the implemented
-protocols more mature.  It is up to the individual working
+According to <<RFC7942>>, "this will allow reviewers and working groups to
+assign due consideration to documents that have the benefit of running code,
+which may serve as evidence of valuable experimentation and feedback that have
+made the implemented protocols more mature.  It is up to the individual working
 groups to use this information as they see fit".
 
 [[calendarserver]]
 === Calendar and Contacts Server
 
-The open source http://calendarserver.org/[Calendar and Contacts Server]
-project is a standards-compliant
-server implementing the CalDAV protocol. This
-production level implementation supports all of the
-requirements described in this document and successfully
-interoperates with the <<apple>>, <<busycal>>,
-<<twodo>>, and <<caldavtester>> client
-implementations described below. This
-implementation is freely distributable under the terms of
-the http://www.apache.org/licenses/LICENSE-2.0.html[Apache License, Version 2.0].
+The open source http://calendarserver.org/[Calendar and Contacts Server] project
+is a standards-compliant server implementing the CalDAV protocol. This
+production level implementation supports all of the requirements described in
+this document and successfully interoperates with the <<apple>>, <<busycal>>,
+<<twodo>>, and <<caldavtester>> client implementations described below. This
+implementation is freely distributable under the terms of the
+http://www.apache.org/licenses/LICENSE-2.0.html[Apache License, Version 2.0].
 
 [[cyrus]]
 === Cyrus Server
 
-The open source
-http://www.cyrusimap.org/[Cyrus Server] project is a
-highly scalable enterprise mail system which also supports
-calendaring.  This production level CalDAV
-implementation supports all of the requirements described in
-this document and successfully interoperates with the
-<<apple>> and <<caldavtester>> client
-implementations described below. This implementation is
+The open source http://www.cyrusimap.org/[Cyrus Server] project is a highly
+scalable enterprise mail system which also supports calendaring.  This
+production level CalDAV implementation supports all of the requirements
+described in this document and successfully interoperates with the <<apple>> and
+<<caldavtester>> client implementations described below. This implementation is
 freely distributable under a BSD style license from
 http://www.cmu.edu/computing/[Computing Services at Carnegie Mellon University].
 
 [[oracle]]
 === Oracle Communications Calendar Server
 
-The http://www.cyrusimap.org/[Oracle Communications Calendar Server]
-project is a standards-compliant,
-scalable, enterprise-ready calendaring solution. This
-production level CalDAV
-implementation supports all of the requirements described in
-this document and successfully interoperates with the
-<<apple>> and <<caldavtester>> client implementations
-described below. This implementation is proprietary and
-available for a free trial and/or purchase from the vendor.
+The http://www.cyrusimap.org/[Oracle Communications Calendar Server] project is
+a standards-compliant, scalable, enterprise-ready calendaring solution. This
+production level CalDAV implementation supports all of the requirements
+described in this document and successfully interoperates with the <<apple>> and
+<<caldavtester>> client implementations described below. This implementation is
+proprietary and available for a free trial and/or purchase from the vendor.
 
 [[apple]]
 === Apple Calendar
 
-The widely used http://www.apple.com/macos/[Apple Calendar]
-client is a standards-compliant client implementing the CalDAV
-protocol.  This production level implementation
-supports all the requirements described in this
-document and successfully interoperates with the
-<<calendarserver>>, <<cyrus>>, and <<oracle>>
-implementations described above. This
-client implementation is proprietary and is distributed
-as part of Apple's desktop operating systems.
+The widely used http://www.apple.com/macos/[Apple Calendar] client is a
+standards-compliant client implementing the CalDAV protocol.  This production
+level implementation supports all the requirements described in this document
+and successfully interoperates with the <<calendarserver>>, <<cyrus>>, and
+<<oracle>> implementations described above. This client implementation is
+proprietary and is distributed as part of Apple's desktop operating systems.
 
 [[busycal]]
 === BusyCal
 
-http://www.busymac.com/busycal/[BusyCal]
-is a standards-compliant calendar client for MacOS implementing
-the CalDAV protocol.  This implementation
-supports all of the requirements described in this document
-and successfully interoperates with the <<calendarserver>>
-and <<cyrus>> implementations described above. This
-implementation is proprietary and available for a free trial
-and/or purchase from the vendor.
+http://www.busymac.com/busycal/[BusyCal] is a standards-compliant calendar
+client for MacOS implementing the CalDAV protocol.  This implementation supports
+all of the requirements described in this document and successfully
+interoperates with the <<calendarserver>> and <<cyrus>> implementations
+described above. This implementation is proprietary and available for a free
+trial and/or purchase from the vendor.
 
 [[caldavtester]]
 === CalDAVTester
 
-http://calendarserver.org/wiki/CalDAVTester[CalDAVTester]
-is an open source test and performance
-application designed to work with CalDAV
-servers and tests various aspects of their protocol
-handling as well as performance.  This widely used
-implementation supports all of the requirements described in
-this document and successfully interoperates with the server
-implementations described above.  This implementation is
-freely distributable under the terms of the
+http://calendarserver.org/wiki/CalDAVTester[CalDAVTester] is an open source test
+and performance application designed to work with CalDAV servers and tests
+various aspects of their protocol handling as well as performance.  This widely
+used implementation supports all of the requirements described in this document
+and successfully interoperates with the server implementations described above.
+This implementation is freely distributable under the terms of the
 http://www.apache.org/licenses/LICENSE-2.0.html[Apache License, Version 2.0].
 
 [[twodo]]
 === 2Do
 
-http://www.2doapp.com/[2Do]
-is a standards-complient calendar client for iOS which uses the
-CalDAV standard for communication. This implementation
-supports all of the requirements described in this document
-and successfully interoperates with the <<calendarserver>>
-implementation described above. This
-implementation is proprietary and available for purchase from
-the vendor.
+http://www.2doapp.com/[2Do] is a standards-complient calendar client for iOS
+which uses the CalDAV standard for communication. This implementation supports
+all of the requirements described in this document and successfully
+interoperates with the <<calendarserver>> implementation described above. This
+implementation is proprietary and available for purchase from the vendor.
