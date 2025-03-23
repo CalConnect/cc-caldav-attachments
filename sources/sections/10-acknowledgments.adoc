@@ -1,5 +1,4 @@
 == Acknowledgments
 
-This specification came about via discussions at the
-Calendaring and Scheduling Consortium. Thanks in particular to
-Mike Douglass and Eric York.
+This specification came about via discussions at the Calendaring and Scheduling
+Consortium. Thanks in particular to Mike Douglass and Eric York.

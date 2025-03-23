@@ -1,15 +1,12 @@
 [appendix]
 == Example Involving Recurring Events
 
-In the following example, the organizer of a recurring meeting
-makes an unsuccessful attempt to add an agenda (HTML
-attachment) to the corresponding calendar resource with a
-conditional request.
-Note that the client includes both the Expect and Prefer
-header fields in the request, thereby preventing itself from
-needlessly sending the attachment data, and requesting that the
-current resource be returned in the failure response (see
-<<RFC8144,section=3.2>>).
+In the following example, the organizer of a recurring meeting makes an
+unsuccessful attempt to add an agenda (HTML attachment) to the corresponding
+calendar resource with a conditional request. Note that the client includes both
+the Expect and Prefer header fields in the request, thereby preventing itself
+from needlessly sending the attachment data, and requesting that the current
+resource be returned in the failure response (see <<RFC8144,section=3.2>>).
 
 [source%unnumbered]
 ----
@@ -71,13 +68,12 @@ END:VEVENT
 END:VCALENDAR
 ----
 
-The organizer of a recurring meeting successfully
-adds an agenda (HTML attachment) to the corresponding calendar
-resource.  Attendees of the meeting are granted read access to
-the newly created attachment resource. Their own copy of the
-meeting is updated to include the new `ATTACH` property pointing
-to the attachment resource and they are notified of the change
-via their scheduling inbox.
+The organizer of a recurring meeting successfully adds an agenda (HTML
+attachment) to the corresponding calendar resource.  Attendees of the meeting
+are granted read access to the newly created attachment resource. Their own copy
+of the meeting is updated to include the new `ATTACH` property pointing to the
+attachment resource and they are notified of the change via their scheduling
+inbox.
 
 [source%unnumbered]
 ----
@@ -155,15 +151,12 @@ END:VEVENT
 END:VCALENDAR
 ----
 
-The organizer has a more specific agenda for the 20th of
-February meeting.
-It is added to that particular instance of the meeting by
-specifying the rid parameter.
-Note that an overridden instance is created with the
-`RECURRENCE-ID` property value matching the value of the "`rid`"
-query parameter in the request.
-Also note that the server takes significant time to complete the
-request and notifies the client accordingly.
+The organizer has a more specific agenda for the 20th of February meeting. It is
+added to that particular instance of the meeting by specifying the rid
+parameter. Note that an overridden instance is created with the `RECURRENCE-ID`
+property value matching the value of the "`rid`" query parameter in the request.
+Also note that the server takes significant time to complete the request and
+notifies the client accordingly.
 
 [source%unnumbered]
 ----

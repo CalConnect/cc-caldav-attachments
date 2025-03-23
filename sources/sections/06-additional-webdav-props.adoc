@@ -4,31 +4,37 @@
 === CALDAV:managed-attachments-server-URL property
 
 Name:: `managed-attachments-server-URL`
+
 Namespace:: `urn:ietf:params:xml:ns:caldav`
-Purpose:: Specifies the server base URI to use when retrieving managed attachments.
-Protected:: This property MUST be protected as only the server can update the value.
-`COPY`/`MOVE` behavior:: This property is only defined on a calendar home collection which cannot be moved or copied.
+
+Purpose:: Specifies the server base URI to use when retrieving managed
+attachments.
+
+Protected:: This property MUST be protected as only the server can update the
+value.
+
+`COPY`/`MOVE` behavior:: This property is only defined on a calendar home
+collection which cannot be moved or copied.
+
 allprop behavior:: `SHOULD NOT` be returned by a `PROPFIND DAV:allprop` request.
-Description:: This property `MAY` be defined on a calendar home
-collection. If present, it contains zero or one `DAV:href` XML elements.
+
+Description:: This property `MAY` be defined on a calendar home collection. If
+present, it contains zero or one `DAV:href` XML elements.
 +
 --
-When one `DAV:href` element is present, its value `MUST` be
-an absolute HTTP URI containing only the scheme
-(i.e. "https") and authority (i.e. host and port) parts.
-Whenever a managed attachment is to be retrieved via an
-HTTP GET, the client `MUST` construct the actual URL of the
-attachment by substituting the scheme and authority parts
-of the attachment URI (as stored in the iCalendar "`ATTACH`"
-property) with the present WebDAV property value.
+When one `DAV:href` element is present, its value `MUST` be an absolute HTTP URI
+containing only the scheme (i.e. "https") and authority (i.e. host and port)
+parts. Whenever a managed attachment is to be retrieved via an HTTP GET, the
+client `MUST` construct the actual URL of the attachment by substituting the
+scheme and authority parts of the attachment URI (as stored in the iCalendar
+"`ATTACH`" property) with the present WebDAV property value.
 
-When no `DAV:href` element is present, the client `MUST`
-substitute the scheme and authority parts of the
-attachment URI with the scheme and authority part of the
-calendar home collection absolute URI.
+When no `DAV:href` element is present, the client `MUST` substitute the scheme
+and authority parts of the attachment URI with the scheme and authority part of
+the calendar home collection absolute URI.
 
-In the absence of this property, the client can
-consider the attachment URI as its actual URL.
+In the absence of this property, the client can consider the attachment URI as
+its actual URL.
 --
 
 Definition::
@@ -56,28 +62,31 @@ Example::
 === CALDAV:max-attachment-size property
 
 Name:: `max-attachment-size`
+
 Namespace:: `urn:ietf:params:xml:ns:caldav`
-Purpose:: Provides a numeric value indicating the maximum
-attachment size, in octets, that the server is willing
-to accept when a managed attachment is stored on the server.
+
+Purpose:: Provides a numeric value indicating the maximum attachment size, in
+octets, that the server is willing to accept when a managed attachment is stored
+on the server.
+
 Protected:: `MUST` be protected as it indicates limits provided by the server.
-`COPY`/`MOVE` behavior:: This property value `MUST` be preserved in `COPY` and `MOVE` operations.
-allprop behavior:: `SHOULD NOT` be returned by a `PROPFIND` `DAV:allprop` request.
-Description:: The `CALDAV:max-attachment-size` property is used to
-specify a numeric value that represents the maximum
-attachment size, in octets, that the server is willing
-to accept when a managed attachment is stored on the
-server.
-The property is defined on the parent collection of the
-calendar object resource to which the attachment is
-associated.
-Any attempt to store a managed attachment exceeding this
-size `MUST` result in an error, with the
-`CALDAV:max-attachment-size` precondition
-(<<errors>>) being violated. In the absence of
-this property, the client can assume that the server
-will allow storing an attachment of any reasonable
-size.
+
+`COPY`/`MOVE` behavior:: This property value `MUST` be preserved in `COPY` and
+`MOVE` operations.
+
+allprop behavior:: `SHOULD NOT` be returned by a `PROPFIND` `DAV:allprop`
+request.
+
+Description:: The `CALDAV:max-attachment-size` property is used to specify a
+numeric value that represents the maximum attachment size, in octets, that the
+server is willing to accept when a managed attachment is stored on the server.
+The property is defined on the parent collection of the calendar object resource
+to which the attachment is associated. Any attempt to store a managed attachment
+exceeding this size `MUST` result in an error, with the
+`CALDAV:max-attachment-size` precondition (<<errors>>) being violated. In the
+absence of this property, the client can assume that the server will allow
+storing an attachment of any reasonable size.
+
 Definition::
 +
 --
@@ -102,30 +111,31 @@ Example::
 === CALDAV:max-attachments-per-resource property
 
 Name:: `max-attachments-per-resource`
+
 Namespace:: `urn:ietf:params:xml:ns:caldav`
-Purpose:: Provides a numeric value indicating the maximum number
-of managed attachments across all instances of a
-calendar object resource stored in a calendar
-collection.
+
+Purpose:: Provides a numeric value indicating the maximum number of managed
+attachments across all instances of a calendar object resource stored in a
+calendar collection.
+
 Protected:: `MUST` be protected as it indicates limits provided by the server.
-`COPY`/`MOVE` behavior:: This property value `MUST` be preserved in `COPY` and `MOVE` operations.
+
+`COPY`/`MOVE` behavior:: This property value `MUST` be preserved in `COPY` and
+`MOVE` operations.
+
 allprop behavior:: `SHOULD NOT` be returned by a `PROPFIND DAV:allprop` request.
-Description:: The `CALDAV:max-attachments-per-resource` property is used
-to specify a numeric value that represents the maximum
-number of managed attachments across all instances of a
-calendar object resource stored in a calendar
-collection.
-Non-managed attachments are not counted toward that limit.
-The property is defined on the parent collection of the
-calendar object resource to which the attachment is
-associated.
-Any attempt to add a managed attachment that would cause
-the calendar resource to exceed this limit `MUST` result
-in an error, with the
-`CALDAV:max-attachments-per-resource` precondition (<<errors>>) being violated.
-In the absence of this property, the client can assume
-that the server can handle any number of managed
-attachments per calendar resource.
+
+Description:: The `CALDAV:max-attachments-per-resource` property is used to
+specify a numeric value that represents the maximum number of managed
+attachments across all instances of a calendar object resource stored in a
+calendar collection. Non-managed attachments are not counted toward that limit.
+The property is defined on the parent collection of the calendar object resource
+to which the attachment is associated. Any attempt to add a managed attachment
+that would cause the calendar resource to exceed this limit `MUST` result in an
+error, with the `CALDAV:max-attachments-per-resource` precondition (<<errors>>)
+being violated. In the absence of this property, the client can assume that the
+server can handle any number of managed attachments per calendar resource.
+
 Definition::
 +
 --

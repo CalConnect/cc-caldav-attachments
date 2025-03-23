@@ -2,9 +2,8 @@
 
 === Parameter Registrations
 
-This specification defines the following new iCalendar
-property parameters to be added to the registry defined in
-<<RFC5545,section=8.2.3>>:
+This specification defines the following new iCalendar property parameters to be
+added to the registry defined in <<RFC5545,section=8.2.3>>:
 
 [%unnumbered]
 |===
