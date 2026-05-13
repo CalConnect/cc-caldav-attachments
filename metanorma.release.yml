@@ -1,3 +1,5 @@
+# metanorma.release.yml — cc-caldav-attachments
+
 documents:
-  - source: sources/cc-51013.adoc
-  - source: sources/draft-ietf-calext-caldav-attachments.adoc
+  - pattern: "cc-*"
+    channels: [public/standards]
